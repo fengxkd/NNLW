@@ -1,13 +1,10 @@
 <!--miniprogram/ipages/index/index.wxml-->
-
-
-
 <!-- <image class="image" mode= "aspectFill" src = "../../images/background.jpg"></image> -->
 <view class='page_tiltle'>
   <view class='page_title_body page_title_userinfo-avatar'>
     <open-data class="userinfo-avatar" background-size="cover" type="userAvatarUrl"></open-data>
     <open-data class="userinfo-nickname" background-size="cover" type="userNickName"></open-data>
-    <label class='iconfont icon-roundaddfill1 page_icon' bindtap='onItemClick1'>^_^开心🎉</label>
+    <label class='iconfont icon-roundaddfill1 page_icon' bindtap='onItemClick1'>🎉开心🎉</label>
   </view>
 </view>
 
@@ -18,41 +15,49 @@
   </view>
 </view>
 
-<view class="doc-box-sub">
-  <video id="myVideo" class = "userVideo" custom-cache = "false" src="{{admin_source}}"
-    enable-danmu danmu-btn controls></video>
+<view class="doc-box-sub" >
+  <video id="myVideo"  class = "userVideo" custom-cache="{{false}}" src="{{admin_source}}"
+    danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
   <view class="btn-area">
     <input bindblur="bindInputBlur" />
     <button bindtap="bindSendDanmu">发送祝福</button>
   </view>
 </view>
 
-<view class="doc-box-sub p-sm m-xs mt-xl shadow-alice" wx:for="{{messageList}}" wx:key="dataTime">
-  <view class="message_title">
-    <image class='messaage-avatar' src="{{item.userAvatarUrl}}" mode='aspectFill'></image>
-    <label class='message-nickname'>{{item.userNickName}}</label>
-    <label class='message-data'>{{item.dataTime}}</label>
-  </view>
-  <view class='message_body'>
-    <label>{{item.content}}</label>
-  </view>
-  <view class='message_body' data-url="{{item.img_url}}" bindtap='previewImg' wx:if="{{item.img_url!='cloud://gyjy-666.6779-gyjy-666/undefined'}}">
-    <image class='image_body' src="{{item.img_url}}" mode='aspectFill'></image>
-  </view>
-  <!-- <view class='message_body'>
-      <image class = "message_common" src='../../images/common.png'></image>
-      <label class = "message_zan_count">{{item.common_count}}</label>
-      <image class = "message_zan" src='../../images/zan.png'></image>
-      <label class = "message_zan_count">{{item.zan_count}}</label>
-  </view> -->
-  <!-- <view class="message_body comment-sub">
-      <view class="comment-sub-name">
-        <text class="success-text">王晓明</text>
-        <text class="gray-text text-sm">2 分钟前</text>
-      </view>
-      <view class="comment-sub-content">说的dei dei！</view>
-    </view> -->
+<view class='body1'>
 
+   <!--<view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view>
+  <view class="bomb-rocket"></view> 
+  <view class="bomb-rocket"></view>
+  <view class="normal-rocket"></view>
+   <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view>
+  <view class="normal-rocket"></view> -->
+
+  <view class="text"> ~ 2018.12.19 ~ Happy birthday!</view>
 
 </view>
 

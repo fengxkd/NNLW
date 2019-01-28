@@ -20,7 +20,8 @@ Page({
     mesaageList:[],
     admin_message:"hello",
     admin_video:"cloud://nndlw-7580d5.6e6e-nndlw-7580d5/NNDLW/王者1.mp4",
-    curIndex:0
+    curIndex:0,
+    hiddenOrNot:false,
   },
   // 预览图片
   previewImg: function (event) {
@@ -53,23 +54,26 @@ Page({
     db.collection('LLDLW').doc('XBO0RnkPDdDCJ2cS').get({
       success: function (res) {
         // res.data 包含该记录的数据
-        console.log(res.data.message);
+        console.log(res.data.display);
         that.setData({
           admin_message: res.data.message,
+          admin_source: res.data.source,
+          hiddenOrNot: res.data.display,
+
         });
         console.log(admin_message);
       }
     });
-    db.collection('LLDLW').doc('XBO6XlsqTi00tkiT').get({
-      success: function (res) {
-        // res.data 包含该记录的数据
-        console.log(res.data.source);
-        that.setData({
-          admin_source: res.data.source,
-        });
-        console.log(admin_source);
-      }
-    });
+    // db.collection('LLDLW').doc('XBO6XlsqTi00tkiT').get({
+    //   success: function (res) {
+    //     // res.data 包含该记录的数据
+    //     console.log(res.data.source);
+    //     that.setData({
+    //       admin_source: res.data.source,
+    //     });
+    //     console.log(admin_source);
+    //   }
+    // });
 
     // //数据获取
     // db.collection('Comments').orderBy('dataTime', 'desc').get().then(res => {

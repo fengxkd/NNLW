@@ -1,5 +1,6 @@
 /* miniprogram/ipages/index/index.wxss */
 @import "./weui.wxss";
+@import "./bir.wxss"
 /* .navigation
 {
   width:100%;

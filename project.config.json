@@ -2,15 +2,15 @@
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": false
 	},
 	"appid": "wx1bbcb28179c7b169",
 	"projectname": "NNLW",
-	"libVersion": "2.2.5",
+	"libVersion": "2.4.2",
 	"condition": {
 		"search": {
 			"current": -1,
